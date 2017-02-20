@@ -1,2 +1,2 @@
-# Assignment 2 of CSC369H: Operating System
+# Assignment 2 of CSC369H
 
