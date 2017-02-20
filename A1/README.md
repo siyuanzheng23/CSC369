@@ -1,1 +1,1 @@
-# Assignment 1 of CSC369H, mark: 85%
+# Assignment 1 of CSC369H
