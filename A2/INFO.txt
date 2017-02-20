@@ -1,0 +1,22 @@
+Name: Zhenyong Lu
+	  Siyuan Zheng
+
+UtorID: luzhen2
+		zhengsi5
+
+svn revision number: 23
+
+Discussion of starvation:
+Starvation can happen if the monitor is not implemented correctly.
+For example, when the buffer is full, arrival function is waiting on
+the producer_cv, if spaces in buffer becomes available, producer_cv is signaled,
+and car can arrive to lane. If that signal is never sent, the CS of arrival will never be reached
+and stavation happens.
+This situation of starvation actually happened to us. When we are at the early stage of testing the program,
+we noticed that the program will never end. And it's caused by a never-ending thread. We use GDB to debug, and found 
+out the thread stuck on arrival funtion. It's becuase when the cross function is called, and when the lane has no car,
+the thread will wait for the signal of consumer_cv. So, a car has be added when cross thread can continue on. However,
+at the beginning, we don't have a incoming car for the buffer to add, so arrival function get stuck because we didn't add a
+proper termination when there's no incoming car for arrival. Therefore, when arrival thread is stuck, the CS of cross thread will never be reached, causing a starvation happened.
+There should be more than one example where this monitor will have starvation.
+
