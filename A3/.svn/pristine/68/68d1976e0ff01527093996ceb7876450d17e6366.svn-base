@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <assert.h>
+#include <unistd.h>
+#include <getopt.h>
+#include <stdlib.h>
+#include <string.h>
+#include "sim.h"
+#include "pagetable.h"
+
+int main(int argc, char *argv[]) {
+
+    FILE *file = fopen ("test.ref", "r");
+    int lines = 0;
+    	addr_t vaddr = 0;
+	char type;
+
+    //get the size of list holding virtual addresses.
+
+   
+   if ( file != NULL )
+   {
+      char line [ 128 ]; /* or other suitable maximum line size */
+      while ( fgets ( line, sizeof line, file ) != NULL ) /* read a line */
+      {
+         //fputs ( line, stdout ); /* write the line */
+      	sscanf(line, "%c %lx", &type, &vaddr);
+	
+		printf("%c %lx\n", type, (long unsigned int)vaddr);
+	
+      	lines++;
+      }
+      fclose ( file );
+   }
+   else
+   {
+      perror ("error"); /* why didn't the file open? */
+   }
+   //return 0;
+printf("Line count is :%d\n", lines);
+return 0;
+}

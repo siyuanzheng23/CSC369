@@ -1,0 +1,171 @@
+#include <stdio.h>
+#include <assert.h>
+#include <unistd.h>
+#include <getopt.h>
+#include <stdlib.h>
+#include "pagetable.h"
+
+
+extern int memsize;
+
+extern int debug;
+
+extern struct frame *coremap;
+
+int head = -1;
+
+int current;
+
+
+
+/* Page to evict is chosen using the clock algorithm.
+ * Returns the page frame number (which is also the index in the coremap)
+ * for the page that is to be evicted.
+ */
+int clock_evict() {
+	// int idx,i;
+	// int min = -1;
+	// int minIndex = -1;
+	// //checking the frame in an 'FIFO' order as well
+	// //every element of the coremap is a frame , checking every one 
+
+	// //The first for loop is getting min and min's index
+	// for(i = 0 ; i < memsize; i ++){
+	// 	//checking whether ref bit is high
+	// 	if( ! ( ((coremap[i].pte) -> frame ) & PG_REG) ){ //ref bit low, compare to min(FIFO purpose)
+	// 		if(min == -1){ //min has not been assigned a meaningful value yet
+	// 			min = coremap[i].howLong;
+	// 			minIndex = i;
+	// 		}else if(coremap[i].howLong < min){
+	// 			min = coremap[i].howLong;
+	// 			minIndex= i;
+	// 		}
+	// 	}
+	// }
+
+	// //the second loop , sets the 'passed pages ref bit low ' and new arrival time for the 'passed pages'
+	// for(i = 0 ; i < memsize; i ++){
+	// 	if( coremap[i].howLong < min ){ //all the passed pages
+	// 		if( ( ((coremap[i].pte) -> frame ) & PG_REG)){ //high
+	// 			howLongCount ++ ;
+	// 			coremap[i].howLong = howLongCount;
+	// 		}
+	// 	}
+	// }
+	//  circular buffer
+	while(  ((coremap[current].pte) -> frame ) &  PG_REF     ){
+
+		coremap[current].pte -> frame &=  ~PG_REF;
+
+		current = (current + 1 )%memsize;
+
+	}
+
+	//coremap[current].pte -> frame  & PG_REF == 0 ,   and the index is found
+	//setting the current index's ref bit to 1 
+	coremap[current].pte -> frame |= PG_REF;
+
+	return current ;
+
+
+	// int idx; 
+	// while(    ((coremap[i].pte) -> frame) & PG_REF  ){
+	// 	current = (current + 1)% memsize;
+	// 	(coremap[i].pte) -> howLongForClock = howLongCount;
+	// 	if(    ! (   ((coremap[i].pte) -> frame) & PG_REF) ){
+	// 		idx = current;
+	// 		current = (current + 1) % memsize;
+	// 		return idx;
+	// 	}
+	// }
+}
+
+/*int clock_evict() {
+
+	int i;
+	int min = -1;
+	int minIndex = -1;
+	//checking the frame in an 'FIFO' order as well
+	//every element of the coremap is a frame , checking every one 
+
+	//The first for loop is getting min and min's index
+	for(i = 0 ; i < memsize; i ++){
+		//checking whether ref bit is high
+		if( ! ( ((coremap[i].pte) -> frame ) & PG_REF) ){ //ref bit low, compare to min(FIFO purpose)
+			if(min == -1){ //min has not been assigned a meaningful value yet
+				min = coremap[i].howLong;
+				minIndex = i;
+			}else if(coremap[i].howLong < min){
+				min = coremap[i].howLong;
+				minIndex= i;
+			}
+		}
+	}
+
+	//the second loop , sets the 'passed pages ref bit low ' and new arrival time for the 'passed pages'
+	for(i = 0 ; i < memsize; i ++){
+		if( coremap[i].howLong < min ){ //all the passed pages
+			if( ( ((coremap[i].pte) -> frame ) & PG_REF)){ //high
+				
+				(coremap[i].pte-> frame ) &= ~PG_REF;
+				
+				coremap[i].howLong = howLongCount;
+				howLongCount ++ ;
+			}
+		}
+	}
+
+
+
+	return minIndex;*/
+	// int idx; 
+	// while(    ((coremap[i].pte) -> frame) & PG_REF  ){
+	// 	current = (current + 1)% memsize;
+	// 	(coremap[i].pte) -> howLongForClock = howLongCount;
+	// 	if(    ! (   ((coremap[i].pte) -> frame) & PG_REF) ){
+	// 		idx = current;
+	// 		current = (current + 1) % memsize;
+	// 		return idx;
+	// 	}
+	// }
+
+    //idx
+
+/*int idx;
+	int min = -1;
+	int i;
+	//checking the frame in an 'FIFO' order as well
+	//every element of the coremap is a frame , checking every one 
+	for(i = 0 ; i < memsize; i ++){
+		//checking whether ref bit is high
+		if( ! ( ((coremap[i].pte) -> frame ) & PG_REF) ){ //ref bit low, compare to min(FIFO purpose)
+			if(min == -1){ //min has not been assigned a meaningful value yet
+				min = coremap[i].howLongForClock;
+			}else if(coremap[i].howLong < min){
+				min = coremap[i].howLongForClock;
+				idx = i;
+			}
+		}else if(  ((coremap[i].pte) -> frame)  & PG_REF){  //high, setting ref bit back to low
+			((coremap[i].pte) -> frame) &= ~PG_REF;
+			coremap[i].howLongForClock = howLongCount;
+		}
+	}*/
+	//return idx;
+//}
+
+/* This function is called on each access to a page to update any information
+ * needed by the clock algorithm.
+ * Input: The page table entry for the page that is being accessed.
+ */
+void clock_ref(pgtbl_entry_t *p) {
+	//p->frame |= PG_REF; //when the page is accessed, set the corresponding pte's ref bit to high
+
+	return;
+}
+
+/* Initialize any data structures needed for this replacement
+ * algorithm. 
+ */
+void clock_init() {
+	current = 0;
+}

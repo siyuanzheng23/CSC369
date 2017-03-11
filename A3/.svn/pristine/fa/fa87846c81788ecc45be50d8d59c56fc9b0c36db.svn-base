@@ -1,0 +1,159 @@
+#include <stdio.h>
+#include <assert.h>
+#include <unistd.h>
+#include <getopt.h>
+#include <stdlib.h>
+#include "pagetable.h"
+#include "sim.h" 
+
+
+//extern int memsize;
+
+extern int debug;
+
+extern struct frame *coremap;
+
+extern char *tracefile;
+int lines;
+//int count = getFileLines();
+addr_t *list; //[count];
+extern int ref_count;
+
+/* Page to evict is chosen using the optimal (aka MIN) algorithm. 
+ * Returns the page frame number (which is also the index in the coremap)
+ * for the page that is to be evicted.
+ */
+int getDistance(int start, addr_t virtualAddr){
+	int distance = -1;
+	int g;
+	printf("core map vddr is %lx\n", virtualAddr);
+	printf("This is the %d -th virtual address\n", start);
+	for(g = start + 1; g < lines; g++){
+		printf("checking if %lx equal %lx\n", list[g],virtualAddr);
+		if((int)list[g] == (int)virtualAddr){
+			
+			return g - start;
+		}
+	}
+
+	return distance;
+}
+int opt_evict() {
+	int i;
+	int evicted_list[memsize];
+	//int evicted_frame[memsize];
+	for(i = 0; i < memsize; i++){
+
+		int dist= getDistance(ref_count, coremap[i].vddr);
+		if(dist == -1){
+			printf("evicted frameeee #%d\n", i);
+			return i;
+		}else{
+			evicted_list[i] = dist;
+			//evicted_frame = i;
+		}
+	}
+	int max_frame, max_dist;
+	for(i = 0; i < memsize; i++){
+		if(i == 0){
+			max_frame = i;
+			max_dist = evicted_list[i];
+
+		}else{
+			if(max_dist < evicted_list[i]){
+				max_dist = evicted_list[i];
+				max_frame = i;
+			}
+		}
+	}
+	printf("evicted fram #%d\n", max_frame);
+	return max_frame;
+}
+
+/* This function is called on each access to a page to update any information
+ * needed by the opt algorithm.
+ * Input: The page table entry for the page that is being accessed.
+ */
+void opt_ref(pgtbl_entry_t *p) {
+
+	return;
+}
+
+/* Initializes any data structures needed for this
+ * replacement algorithm.
+ */
+ int getFileLines(){
+ 	 FILE *file = fopen (tracefile, "r");
+    lines = 0;
+    
+	
+	int ch;
+
+    //get the size of list holding virtual addresses.
+
+        
+
+   
+   if ( file != NULL )
+   {	
+
+   	while(!feof(file)){
+	    ch = fgetc(file);
+        if(ch == '\n'){
+    	    lines++;
+    	}
+    }
+
+      fclose ( file );
+
+   }
+   else
+   {
+      perror ("error"); /* why didn't the file open? */
+   	  return -1;
+   }
+   //return 0;
+   return lines;
+
+
+ }
+void opt_init() {
+
+	int count = getFileLines();
+	list = malloc(sizeof(addr_t) * count);
+
+   
+
+   	FILE *re_openfile = fopen (tracefile, "r");
+   	
+   	if ( re_openfile != NULL ){	
+        char line [MAXLINE]; /* or other suitable maximum line size */
+   	    int j = 0;
+   	    //addr_t list[lines];
+   	    addr_t virtualaddress = 0;
+   	    char type;
+   	    printf("buf size is%d\n", MAXLINE);
+        while ( fgets ( line, MAXLINE,  re_openfile) != NULL ){	
+      		//addr_t vaddr = 0;
+      		if(line[0] != '=') {
+	      		sscanf(line, "%c %lx", &type, &virtualaddress);
+	      		//printf("line is%s\n", line);
+	      		
+	      		list[j] = (addr_t)virtualaddress;
+	      		printf("added  virtual %lx\n", (long unsigned int)list[j]);
+	      		
+	      		j ++;
+	      	}
+			
+	
+      		//lines++;
+      	}
+      	fclose(re_openfile);
+      	//addr_list = list;
+    }else{
+    	perror ("error"); 
+    }
+printf("Line count is :%d\n", lines);
+
+}
+

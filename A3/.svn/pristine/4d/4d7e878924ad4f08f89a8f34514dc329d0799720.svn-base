@@ -1,0 +1,16 @@
+SRCS = simpleloop.c matmul.c blocked.c consumer.c
+PROGS = simpleloop matmul blocked consumer
+
+all : $(PROGS)
+
+$(PROGS) : % : %.c
+	gcc -Wall -g -o $@ $<
+
+
+traces: $(PROGS)
+	./runit consumer
+
+
+.PHONY: clean
+clean : 
+	rm -f simpleloop matmul consumer blocked tr-*.ref *.marker *~

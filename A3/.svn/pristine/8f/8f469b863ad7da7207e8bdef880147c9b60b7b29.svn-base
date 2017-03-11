@@ -1,0 +1,202 @@
+Task2 
+Question  1 :
+
+Tables
+
+File Name: tr-matmul.ref    
+
+Memory sizes:           200           
+Algorithm:              OPT     	 Clock          LRU           FIFO	                                                         
+Hit rate:               99.3331          98.8615        65.3200	      63.9551
+Hit count:              2869416          2855792        1886886	      1847459
+Miss count:             19264		 32888          1001794	      1041221
+Overall eviction count: 19064		 32688		1001694       1041171
+Clean evictions:        17979            31608		1000612       1040063
+Dirty evictions:        1085		 1080		1082	      1108
+
+Memory sizes:           150           
+Algorithm:              OPT     	 Clock          LRU           FIFO	                                                         
+Hit rate:               99.0787		 98.8615        65.3200	      63.9551	
+Hit count:              2862066		 2855792	1886886       1847459
+Miss count:             26614		 32888		1001794	      1041221
+Overall eviction count: 26464		 32688		1001694	      1041171
+Clean evictions:        25379		 31608		1000612       1040063
+Dirty evictions:     	1085 	         1080		1082          1108
+
+Memory sizes:           100           
+Algorithm:              OPT     	 Clock          LRU           FIFO	                                                         
+Hit rate:               96.7876		 65.3200	65.3200	      63.9551
+Hit count:              2795883		 1886886	1886886	      1847459
+Miss count:             92797		 1001794	1001794       1041221	
+Overall eviction count: 92697		 1001694	1001694	      1041171
+Clean evictions:        91612		 1000612	1000612       1040063
+Dirty evictions:   	1085		 1082		1082          1108
+
+Memory sizes:           50           
+Algorithm:              OPT     	 Clock          LRU           FIFO	                                                         
+Hit rate:               96.7876		 65.3200	63.9551       63.9551
+Hit count:              2795883		 1886886	1847459	      1847459
+Miss count:             92797		 1001794	1041221	      1041221
+Overall eviction count: 92697		 1001694	1041171	      1041171
+Clean evictions:        91612		 1000612	1040063       1040063
+Dirty evictions:   	1085		 1082		1108          1108
+
+
+File Name: tr-simpleloop.ref
+
+Memory sizes:           200           
+Algorithm:              OPT     	 Clock          LRU           FIFO	                                                         
+Hit rate:               76.0174 	 75.5814	75.5905       75.3543
+Hit count:              8368		 8320		8321	      8295
+Miss count:             2640		 2688		2687	      2713
+Overall eviction count: 2440		 2488		2487          2513
+Clean evictions:        0		 0		0             12
+Dirty evictions:        2440		 2488		2487          2501
+
+Memory sizes:           150           
+Algorithm:              OPT     	 Clock          LRU           FIFO	                                                         
+Hit rate:               76.0174		 75.5814	75.5905       75.2816
+Hit count:              8368		 8320		8321          8287
+Miss count:             2640		 2688		2687          2721
+Overall eviction count: 2490		 2538		2537	      2571
+Clean evictions:        0		 0		0	      16
+Dirty evictions:     	2490		 2538		2537          2555
+
+Memory sizes:           100           
+Algorithm:              OPT     	 Clock          LRU           FIFO	                                                         
+Hit rate:               76.0174		 75.5451	75.5632       74.9092
+Hit count:              8368		 8316		8318	      8246
+Miss count:             2640		 2692		2690          2762
+Overall eviction count: 2540		 2592		2590	      2662
+Clean evictions:        0		 3		2             44
+Dirty evictions:        2540		 2589		2588          2618
+
+Memory sizes:           50           
+Algorithm:              OPT     	 Clock          LRU           FIFO	                                                         
+Hit rate:               75.6541		 74.5730	74.6911       72.9560
+Hit count:              8328		 8209		8222	      8031
+Miss count:             2680		 2799		2786	      2977
+Overall eviction count: 2630		 2749		2736	      2927
+Clean evictions:        27		 98		88	      202
+Dirty evictions:        2603		 2651		2648	      2725
+
+
+
+File Name: tr-blocked.ref
+
+Memory sizes:           200           
+Algorithm:              OPT     	 Clock          LRU           FIFO	                                                         
+Hit rate:               99.8820		 99.8414	99.8264       99.8420
+Hit count:              1163465		 1162993	1162818	      1162999
+Miss count:             1375		 1847		2022	      1841
+Overall eviction count: 1175		 1647		1822          1641
+Clean evictions:        342		 762		939           734
+Dirty evictions:        833		 885		883           907
+
+Memory sizes:           150           
+Algorithm:              OPT     	 Clock          LRU           FIFO	                                                         
+Hit rate:               99.8734		 99.8235	99.8239       99.8068
+Hit count:              1163365		 1162784	1162789       1162589
+Miss count:             1475		 2056		2051          2251
+Overall eviction count: 1325		 1906		1901	      2101
+Clean evictions:        446		 1020		1015          1051
+Dirty evictions:        879		 886		886           1050
+
+Memory sizes:           100           
+Algorithm:              OPT     	 Clock          LRU           FIFO	                                                         
+Hit rate:               99.8560		 99.8092	99.8232       99.8000
+Hit count:              1163163		 1162618	1162780	      1162510
+Miss count:             1677		 2222		2060          2330
+Overall eviction count: 1577		 2122		1960          2230
+Clean evictions:        681		 1074		1073          1159
+Dirty evictions:   	896		 1048		887           1071
+
+Memory sizes:           50           
+Algorithm:              OPT     	 Clock          LRU           FIFO	                                                         
+Hit rate:               99.8269		 99.7459	99.7692       99.7124
+Hit count:              1162824		 1161880	1162152       1161490
+Miss count:             2016		 2960		2688          3350
+Overall eviction count: 1966		 2910		2638          3300
+Clean evictions:        1070		 1434		1206          1864
+Dirty evictions:  	896		 1476		1432          1436
+
+
+
+File Name: tr-map.ref
+
+Memory sizes:           200           
+Algorithm:              OPT     	 Clock          LRU           FIFO	                                                         
+Hit rate:               99.7437		 99.7437	99.7437       99.7437
+Hit count:              45922		 45922    	45922	      45922
+Miss count:             118		 118		118	      118
+Overall eviction count: 0		 0		0             0
+Clean evictions:        0		 0		0             0
+Dirty evictions:        0		 0		0             0
+
+Memory sizes:           150           
+Algorithm:              OPT     	 Clock          LRU           FIFO	                                                         
+Hit rate:               99.7437		 99.7437	99.7437       99.7437
+Hit count:              45922		 45922   	45922         45922
+Miss count:             118		 118		118           118
+Overall eviction count: 0		 0		0	      0
+Clean evictions:        0		 0		0             0
+Dirty evictions:        0		 0		0             0
+
+Memory sizes:           100           
+Algorithm:              OPT     	 Clock          LRU           FIFO	                                                         
+Hit rate:               99.7437		 99.7328	99.7415       99.7133
+Hit count:              45922		 45917   	45921	      45908
+Miss count:             118		 123		119           132
+Overall eviction count: 18		 23		19            32
+Clean evictions:        0		 0		0             0
+Dirty evictions:   	18		 23             19            32
+
+Memory sizes:           50           
+Algorithm:              OPT     	 Clock          LRU           FIFO	                                                         
+Hit rate:               99.7176		 99.6177	99.6242       99.4852
+Hit count:              45910		 45864   	45867         45803
+Miss count:             130		 176		173           237
+Overall eviction count: 80		 126		123           187
+Clean evictions:        5		 29		29            56
+Dirty evictions:  	75		 97		94            131
+
+
+
+
+Question 2:
+Explanation:
+
+Observations within the same program : 
+-When physical memory size is large(like 200 frames), OPT and clock algorithm generally generate very high hit rate, and OPT’s will be just slightly higher than clock’s.
+-When physical memory size if large(like 200 frames), OPT and clock have significant higher hitting rates than LRU and FIFO
+-When physical memory size is small(like 50 frames), OPT, clock, FIFO, LRU will have the moderate strong and similar hitting rates(60% to 70% + )
+-Generally speaking, the physical memory size has very small effect on hitting rate for FIFO and LRU algorithm.
+-Generally speaking, the physical memory size has relatively large effect on hitting rate for OPT and clock algorithm.
+-For the same program/process ,the smaller the physical memory size is, the lower the hitting rate will each page replacement algorithm generate
+Reasons for the above observations : 
+OPT is the best algorithm for sure, since it rationally analyzes the least referenced physical frame, and it assumes that it knows about the future situations of paging, thus selecting the longest-time-used-again one to be evicted, while FIFO is just generally removing the oldest one, LRU is replacing the frame that is used the least in the past(past is really a bad prediction for the future), and clock is basically looping over frames as circular buffer, replacing the frame once finding it unreferenced(indicated by reference bit of the corresponding pte_t).
+
+Since size of VIRTUAL ADDRESS spaces for the same program is generally fixed, thus the larger the size of physical frames => the less likely that the process will need some physical frames swapped into the disk => less page faults => higher hitting rate
+
+
+
+
+Explanations of four Programs 
+By analyzing the simple loop program, none of the algorithm has high hitting rate, since the program is continuously ‘appending’ value to an array(or continuously allocating new memory space) , and because every increment is 128 * sizeof(double) which is 128 * 8, thus it is very unlikely that the program will reference the same memory address more than one time, and it requires continuously new physical frames(need to get the unused one swapped in), which causes page faults => low hitting rates.
+
+By analyzing the matmul program, which is the computing multiplication of matrix. It is convinced that both OPT and Clock page replacement algorithm will have the high hitting rate. Since matrix multiplication involves reusing the same variable again and again(based on Math common sense as well as reading code in the program). Thus no matter predicting the likelihood of page’s being referenced by analyzing the future or simply analyzing the reference bit, it BOTH benefit choosing the correct victim to evict. 
+=> OPT and clock algorithm have much higher hitting rate than the other two(much fewer page faults)
+
+By analyzing the blocked program, the four algorithm both generate high hitting rate. This is because that the programs involve matrix adding and multiplication, thus it is very likely that  1, the recently ‘come’ memory will will be referenced again 2, the referenced memory is likely to be referenced again 3, the least recently used is actually the most likely to be referenced in the future 4, It is no doubt that OPT is the best algorithm.  Thus, all four algorithm will have high hitting rate.
+
+By analyzing the map program, since 1, the program is relatively simple and contain few lines of code 2, the program is continuously accessing or checking one(s) variables, like generic integer variables that store int value or conditional variables. 
+Then, it may seldom trigger page replacement approach, which means => no page faults => high hitting rate
+
+
+
+
+
+Question 3: 
+//TO BE DONE
+
+

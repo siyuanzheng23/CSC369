@@ -1,0 +1,595 @@
+
+
+
+
+
+
+
+
+
+Task2 Tables
+
+File Name: tr-matmul.ref
+OPT:                                 
+200 
+Hit rate: 99.3331
+Hit count: 2869416
+Miss count: 19264
+Overall eviction count: 19064
+Clean evictions: 17979
+Dirty evictions: 1085
+
+
+150
+Hit rate: 99.0787
+Hit count: 2862066
+Miss count: 26614
+Overall eviction count: 26464
+Clean evictions count: 25379
+Dirty evictions count: 1085
+
+
+100
+Hit rate: 96.7876
+Hit count: 2795883
+Miss count: 92797
+Overall eviction count: 92697
+Clean evictions: 91612
+Dirty evictions: 1085
+
+
+50
+Hit rate: 96.7876
+Hit count: 2795883
+Miss count: 92797
+Overall eviction count: 92697
+Clean evictions: 91612
+Dirty evictions: 1085
+
+
+
+Clock:
+200
+Hit rate: 98.8615
+Hit count: 2855792
+Miss count: 32888
+Overall eviction count: 32688
+Clean evictions: 31608
+Dirty evictions: 1080
+
+150:
+Hit rate: 98.8615
+Hit count: 2855792
+Miss count: 32888
+Overall eviction count: 32688
+Clean evictions: 31608
+Dirty evictions: 1080
+
+100
+Hit rate: 65.3200
+Hit count: 1886886
+Miss count: 1001794
+Overall eviction count: 1001694
+Clean evictions: 1000612
+Dirty evictions: 1082
+
+50
+Hit rate: 65.3200
+Hit count: 1886886
+Miss count: 1001794
+Overall eviction count: 1001694
+Clean evictions: 1000612
+Dirty evictions: 1082
+
+
+LRU
+200
+Hit rate: 65.3200
+Hit count: 1886886
+Miss count: 1001794
+Overall eviction count: 1001694
+Clean evictions: 1000612
+Dirty evictions: 1082
+
+
+150
+Hit rate: 65.3200
+Hit count: 1886886
+Miss count: 1001794
+Overall eviction count: 1001694
+Clean evictions: 1000612
+Dirty evictions: 1082
+
+100
+Hit rate: 65.3200
+Hit count: 1886886
+Miss count: 1001794
+Overall eviction count: 1001694
+Clean evictions: 1000612
+Dirty evictions: 1082
+
+50
+Hit rate: 63.9551
+Hit count: 1847459
+Miss count: 1041221
+Overall eviction count: 1041171
+Clean evictions: 1040063
+Dirty evictions: 1108
+
+
+FIFO
+200
+Hit rate: 63.9551
+Hit count: 1847459
+Miss count: 1041221
+Overall eviction count: 1041171
+Clean evictions: 1040063
+Dirty evictions: 1108
+
+150
+Hit rate: 63.9551
+Hit count: 1847459
+Miss count: 1041221
+Overall eviction count: 1041171
+Clean evictions: 1040063
+Dirty evictions: 1108
+
+100
+Hit rate: 63.9551
+Hit count: 1847459
+Miss count: 1041221
+Overall eviction count: 1041171
+Clean evictions: 1040063
+Dirty evictions: 1108
+
+50
+Hit rate: 63.9551
+Hit count: 1847459
+Miss count: 1041221
+Overall eviction count: 1041171
+Clean evictions: 1040063
+Dirty evictions: 1108
+
+
+
+
+
+
+
+
+File Name: tf-simpleloop.ref
+OPT
+200
+Hit rate: 76.0174
+Hit count: 8368
+Miss count: 2640
+Overall eviction count: 2440
+Clean evictions: 0
+Dirty evictions: 2440
+
+150
+Hit rate: 76.0174
+Hit count: 8368
+Miss count: 2640
+Overall eviction count: 2490
+Clean evictions: 0
+Dirty evictions: 2490
+
+100
+Hit rate: 76.0174
+Hit count: 8368
+Miss count: 2640
+Overall eviction count: 2540
+Clean evictions: 0
+Dirty evictions: 2540
+
+50
+Hit rate: 75.6541
+Hit count: 8328
+Miss count: 2680
+Overall eviction count: 2630
+Clean evictions: 27
+Dirty evictions: 2603
+
+
+LRU
+200
+Hit rate: 75.5905
+Hit count: 8321
+Miss count: 2687
+Overall eviction count: 2487
+Clean evictions: 0
+Dirty evictions: 2487
+
+150
+Hit rate: 75.5905
+Hit count: 8321
+Miss count: 2687
+Overall eviction count: 2537
+Clean evictions: 0
+Dirty evictions: 2537
+
+100
+Hit rate: 75.5632
+Hit count: 8318
+Miss count: 2690
+Overall eviction count: 2590
+Clean evictions: 2
+Dirty evictions: 2588
+
+50
+Hit rate: 74.6911
+Hit count: 8222
+Miss count: 2786
+Overall eviction count: 2736
+Clean evictions: 88
+Dirty evictions: 2648
+
+CLOCK
+200
+Hit rate: 75.5814
+Hit count: 8320
+Miss count: 2688
+Overall eviction count: 2488
+Clean evictions: 0
+Dirty evictions: 2488
+
+150
+Hit rate: 75.5814
+Hit count: 8320
+Miss count: 2688
+Overall eviction count: 2538
+Clean evictions: 0
+Dirty evictions: 2538
+
+100
+Hit rate: 75.5451
+Hit count: 8316
+Miss count: 2692
+Overall eviction count: 2592
+Clean evictions: 3
+Dirty evictions: 2589
+
+50
+Hit rate: 74.5730
+Hit count: 8209
+Miss count: 2799
+Overall eviction count: 2749
+Clean evictions: 98
+Dirty evictions: 2651
+
+FIFO
+200
+Hit rate: 75.3543
+Hit count: 8295
+Miss count: 2713
+Overall eviction count: 2513
+Clean evictions: 12
+Dirty evictions: 2501
+
+150
+Hit rate: 75.2816
+Hit count: 8287
+Miss count: 2721
+Overall eviction count: 2571
+Clean evictions: 16
+Dirty evictions: 2555
+
+100
+Hit rate: 74.9092
+Hit count: 8246
+Miss count: 2762
+Overall eviction count: 2662
+Clean evictions: 44
+Dirty evictions: 2618
+
+50
+Hit rate: 72.9560
+Hit count: 8031
+Miss count: 2977
+Overall eviction count: 2927
+Clean evictions: 202
+Dirty evictions: 2725
+
+
+
+File Name: tr-blocked.ref
+OPT
+200
+Hit rate: 99.8820
+Hit count: 1163465
+Miss count: 1375
+Overall eviction count: 1175
+Clean evictions: 342
+Dirty evictions: 833
+
+
+150
+Hit rate: 99.8734
+Hit count: 1163365
+Miss count: 1475
+Overall eviction count: 1325
+Clean evictions: 446
+Dirty evictions: 879
+
+
+100
+Hit rate: 99.8560
+Hit count: 1163163
+Miss count: 1677
+Overall eviction count: 1577
+Clean evictions: 681
+Dirty evictions: 896
+
+
+50
+Hit rate: 99.8269
+Hit count: 1162824
+Miss count: 2016
+Overall eviction count: 1966
+Clean evictions: 1070
+Dirty evictions: 896
+
+
+
+
+
+LRU
+200
+Hit rate: 99.8264
+Hit count: 1162818
+Miss count: 2022
+Overall eviction count: 1822
+Clean evictions: 939
+Dirty evictions: 883
+
+
+150
+Hit rate: 99.8239
+Hit count: 1162789
+Miss count: 2051
+Overall eviction count: 1901
+Clean evictions: 1015
+Dirty evictions: 886
+
+
+100
+Hit rate: 99.8232
+Hit count: 1162780
+Miss count: 2060
+Overall eviction count: 1960
+Clean evictions: 1073
+Dirty evictions: 887
+
+
+50
+Hit rate: 99.7692
+Hit count: 1162152
+Miss count: 2688
+Overall eviction count: 2638
+Clean evictions: 1206
+Dirty evictions: 1432
+
+
+
+
+
+CLOCK
+200
+Hit rate: 99.8414
+Hit count: 1162993
+Miss count: 1847
+Overall eviction count: 1647
+Clean evictions: 762
+Dirty evictions: 885
+
+
+150
+Hit rate: 99.8235
+Hit count: 1162784
+Miss count: 2056
+Overall eviction count: 1906
+Clean evictions: 1020
+Dirty evictions: 886
+
+
+100
+Hit rate: 99.8092
+Hit count: 1162618
+Miss count: 2222
+Overall eviction count: 2122
+Clean evictions: 1074
+Dirty evictions: 1048
+
+
+
+
+50
+Hit rate: 99.7459
+Hit count: 1161880
+Miss count: 2960
+Overall eviction count: 2910
+Clean evictions: 1434
+Dirty evictions: 1476
+
+
+
+
+
+FIFO
+200
+Hit rate: 99.8420
+Hit count: 1162999
+Miss count: 1841
+Overall eviction count: 1641
+Clean evictions: 734
+Dirty evictions: 907
+
+
+150
+Hit rate: 99.8068
+Hit count: 1162589
+Miss count: 2251
+Overall eviction count: 2101
+Clean evictions: 1051
+Dirty evictions: 1050
+
+
+100
+Hit rate: 99.8000
+Hit count: 1162510
+Miss count: 2330
+Overall eviction count: 2230
+Clean evictions: 1159
+Dirty evictions: 1071
+
+
+50
+Hit rate: 99.7124
+Hit count: 1161490
+Miss count: 3350
+Overall eviction count: 3300
+Clean evictions: 1864
+Dirty evictions: 1436
+
+
+tr-map.ref
+OPT
+200
+Hit rate: 99.7437
+Hit count: 45922
+Miss count: 118
+Overall eviction count: 0
+Clean evictions count: 0
+Dirty evictions count: 0
+
+150
+Hit rate: 99.7437
+Hit count: 45922
+Miss count: 118
+Overall eviction count: 0
+Clean evictions count: 0
+Dirty evictions count: 0
+
+100
+
+Hit rate: 99.7437
+Hit count: 45922
+Miss count: 118
+Overall eviction count: 18
+Clean evictions count: 0
+Dirty evictions count: 18
+	
+50
+Hit rate: 99.7176
+Hit count: 45910
+Miss count: 130
+Overall eviction count: 80
+Clean evictions count: 5
+Dirty evictions count: 75
+
+
+
+
+clock
+200
+Hit rate: 99.7437
+Hit count: 45922
+Miss count: 118
+Overall eviction count: 0
+Clean evictions count: 0
+Dirty evictions count: 0
+
+150
+Hit rate: 99.7437
+Hit count: 45922
+Miss count: 118
+Overall eviction count: 0
+Clean evictions count: 0
+Dirty evictions count: 0
+
+100
+Hit rate: 99.7328
+Hit count: 45917
+Miss count: 123
+Overall eviction count: 23
+Clean evictions count: 0
+Dirty evictions count: 23
+
+
+50
+Hit rate: 99.6177
+Hit count: 45864
+Miss count: 176
+Overall eviction count: 126
+Clean evictions count: 29
+Dirty evictions count: 97
+
+LRU
+200
+Hit rate: 99.7437
+Hit count: 45922
+Miss count: 118
+Overall eviction count: 0
+Clean evictions count: 0
+Dirty evictions count: 0
+
+150
+Hit rate: 99.7437
+Hit count: 45922
+Miss count: 118
+Overall eviction count: 0
+Clean evictions count: 0
+Dirty evictions count: 0
+100
+Hit rate: 99.7415
+Hit count: 45921
+Miss count: 119
+Overall eviction count: 19
+Clean evictions count: 0
+Dirty evictions count: 19
+
+50
+Hit rate: 99.6242
+Hit count: 45867
+Miss count: 173
+Overall eviction count: 123
+Clean evictions count: 29
+Dirty evictions count: 94
+
+
+FIFO
+200
+Hit rate: 99.7437
+Hit count: 45922
+Miss count: 118
+Overall eviction count: 0
+Clean evictions count: 0
+Dirty evictions count: 0
+
+150
+Hit rate: 99.7437
+Hit count: 45922
+Miss count: 118
+Overall eviction count: 0
+Clean evictions count: 0
+Dirty evictions count: 0
+
+100
+Hit rate: 99.7133
+Hit count: 45908
+Miss count: 132
+Overall eviction count: 32
+Clean evictions count: 0
+Dirty evictions count: 32
+
+50
+Hit rate: 99.4852
+Hit count: 45803
+Miss count: 237
+Overall eviction count: 187
+Clean evictions count: 56
+Dirty evictions count: 131
+
+
+
